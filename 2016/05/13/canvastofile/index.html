@@ -87,10 +87,10 @@
 <meta name="description" content="准备工作想要将canvas元素当前显示的内容生成为图像文件，我们首先要获取canvas中的数据,在HTML5 &amp;lt;canvas&amp;gt;元素的标准中提供了toDataURL()的方法可以将canvas中的内容生成为指定格式的DataURL,使用方法如下:12// 假设有一个id为cvs的canvas元素var dataurl = document.getElementById(&apos;cvs&apos;).to">
 <meta property="og:type" content="article">
 <meta property="og:title" content="canvas元素内容生成图像文件">
-<meta property="og:url" content="http://yoursite.com/2016/05/13/canvastofile/index.html">
+<meta property="og:url" content="http://pandagao.com/2016/05/13/canvastofile/index.html">
 <meta property="og:site_name" content="pandaGao">
 <meta property="og:description" content="准备工作想要将canvas元素当前显示的内容生成为图像文件，我们首先要获取canvas中的数据,在HTML5 &amp;lt;canvas&amp;gt;元素的标准中提供了toDataURL()的方法可以将canvas中的内容生成为指定格式的DataURL,使用方法如下:12// 假设有一个id为cvs的canvas元素var dataurl = document.getElementById(&apos;cvs&apos;).to">
-<meta property="og:updated_time" content="2016-05-13T14:13:26.000Z">
+<meta property="og:updated_time" content="2016-05-13T17:43:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="canvas元素内容生成图像文件">
 <meta name="twitter:description" content="准备工作想要将canvas元素当前显示的内容生成为图像文件，我们首先要获取canvas中的数据,在HTML5 &amp;lt;canvas&amp;gt;元素的标准中提供了toDataURL()的方法可以将canvas中的内容生成为指定格式的DataURL,使用方法如下:12// 假设有一个id为cvs的canvas元素var dataurl = document.getElementById(&apos;cvs&apos;).to">
@@ -174,12 +174,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            归档
+            分类
           </a>
         </li>
       
@@ -190,6 +190,16 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
           </a>
         </li>
       
@@ -264,6 +274,8 @@
           
 
           
+
+          
           
 
           
@@ -279,7 +291,7 @@
 
       
         <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>想要将canvas元素当前显示的内容生成为图像文件，我们首先要获取canvas中的数据,在HTML5 <code>&lt;canvas&gt;</code>元素的标准中提供了<code>toDataURL()</code>的方法可以将canvas中的内容生成为指定格式的DataURL,使用方法如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设有一个id为cvs的canvas元素</span></span><br><span class="line"><span class="keyword">var</span> dataurl = <span class="built_in">document</span>.getElementById(<span class="string">'cvs'</span>).toDataURL(<span class="string">'image/png'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>我们现在需要将DataURL生成为一个png类型的图像文件，并且这个操作是在本地完成的，不需要服务器帮助生成文件。以下提供两种方法：</p>
+<p>我们现在需要将DataURL生成为一个png类型的图像文件，并且这个操作是在本地完成的，不需要服务器帮助生成文件。以下提供两种方法：<br><a id="more"></a></p>
 <h3 id="方法一-利用HTML5-lt-a-gt-标签的download属性"><a href="#方法一-利用HTML5-lt-a-gt-标签的download属性" class="headerlink" title="方法一 利用HTML5 &lt;a&gt;标签的download属性"></a>方法一 利用HTML5 <code>&lt;a&gt;</code>标签的download属性</h3><p>在HTML5标准中，<code>&lt;a&gt;</code>标签拥有一个新的属性download，download属性用来指明该超链接指向的目标是应该被下载的文件，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://www.pandagao.com&quot; download&gt;下载&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
 <p>download属性可以被赋值，用来指明下载文件的名称，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://www.pandagao.com&quot; download=&quot;index.html&quot;&gt;下载&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
 <h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p>现在，我们可以通过将DataURL赋值给<code>&lt;a&gt;</code>标签的href属性，并且使用download属性使其转变为可下载的图片。</p>
@@ -309,9 +321,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/html5/" rel="tag">#html5</a>
+            <a href="/tags/html5/" rel="tag"><i class="fa fa-tag"></i> html5</a>
           
-            <a href="/tags/canvas/" rel="tag">#canvas</a>
+            <a href="/tags/canvas/" rel="tag"><i class="fa fa-tag"></i> canvas</a>
           
         </div>
       
@@ -353,7 +365,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/05/13/canvastofile/"
-           data-title="canvas元素内容生成图像文件" data-url="http://yoursite.com/2016/05/13/canvastofile/">
+           data-title="canvas元素内容生成图像文件" data-url="http://pandagao.com/2016/05/13/canvastofile/">
       </div>
     
   </div>
@@ -393,7 +405,7 @@
                src="http://7xpo7m.com1.z0.glb.clouddn.com/avatar.jpg"
                alt="pandaGao" />
           <p class="site-author-name" itemprop="name">pandaGao</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+          <p class="site-description motion-element" itemprop="description">人生如逆旅 我亦是行人</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -403,6 +415,13 @@
             </a>
           </div>
 
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
           
 
           

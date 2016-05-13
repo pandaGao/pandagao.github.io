@@ -84,22 +84,16 @@
 
 
 
-<meta name="description" content="测试环境为Ubuntu16.04 LTS (Ubuntu 14.04以上均可)
-1. 安装Shadowsocks-qt5123sudo add-apt-repository ppa:hzwhuang/ss-qt5sudo apt-get updatesudo apt-get install shadowsocks-qt5
-服务器设置点击菜单栏中 “Connection &amp;gt; Add &amp;gt;">
+<meta name="description" content="测试环境为Ubuntu16.04 LTS (Ubuntu 14.04以上均可)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu下使用Shadowsocks和PAC科学上网">
-<meta property="og:url" content="http://yoursite.com/2016/05/13/ubuntu-use-shadowsocks-and-pac/index.html">
+<meta property="og:url" content="http://pandagao.com/2016/05/13/ubuntu-use-shadowsocks-and-pac/index.html">
 <meta property="og:site_name" content="pandaGao">
-<meta property="og:description" content="测试环境为Ubuntu16.04 LTS (Ubuntu 14.04以上均可)
-1. 安装Shadowsocks-qt5123sudo add-apt-repository ppa:hzwhuang/ss-qt5sudo apt-get updatesudo apt-get install shadowsocks-qt5
-服务器设置点击菜单栏中 “Connection &amp;gt; Add &amp;gt;">
-<meta property="og:updated_time" content="2016-05-13T14:14:17.000Z">
+<meta property="og:description" content="测试环境为Ubuntu16.04 LTS (Ubuntu 14.04以上均可)">
+<meta property="og:updated_time" content="2016-05-13T18:10:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu下使用Shadowsocks和PAC科学上网">
-<meta name="twitter:description" content="测试环境为Ubuntu16.04 LTS (Ubuntu 14.04以上均可)
-1. 安装Shadowsocks-qt5123sudo add-apt-repository ppa:hzwhuang/ss-qt5sudo apt-get updatesudo apt-get install shadowsocks-qt5
-服务器设置点击菜单栏中 “Connection &amp;gt; Add &amp;gt;">
+<meta name="twitter:description" content="测试环境为Ubuntu16.04 LTS (Ubuntu 14.04以上均可)">
 
 
 
@@ -180,12 +174,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            归档
+            分类
           </a>
         </li>
       
@@ -196,6 +190,16 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
           </a>
         </li>
       
@@ -255,6 +259,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/越过山丘/" itemprop="url" rel="index">
+                    <span itemprop="name">越过山丘</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -265,6 +288,8 @@
                 </a>
               </span>
             
+          
+
           
 
           
@@ -284,7 +309,7 @@
       
 
       
-        <p>测试环境为Ubuntu16.04 LTS (Ubuntu 14.04以上均可)</p>
+        <p>测试环境为Ubuntu16.04 LTS (Ubuntu 14.04以上均可)<br><a id="more"></a></p>
 <h3 id="1-安装Shadowsocks-qt5"><a href="#1-安装Shadowsocks-qt5" class="headerlink" title="1. 安装Shadowsocks-qt5"></a>1. 安装Shadowsocks-qt5</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:hzwhuang/ss-qt5</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install shadowsocks-qt5</span><br></pre></td></tr></table></figure>
 <h4 id="服务器设置"><a href="#服务器设置" class="headerlink" title="服务器设置"></a>服务器设置</h4><p>点击菜单栏中 “Connection &gt; Add &gt; Manually” 进行手动配置<br><a href="https://github.com/shadowsocks/shadowsocks-qt5/wiki/%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C#%E7%BC%96%E8%BE%91%E9%85%8D%E7%BD%AE" target="_blank" rel="external">点此查看详细配置信息</a><br>右键点击新建的连接，选择connect与代理服务器进行连接</p>
 <h4 id="更改系统代理设置"><a href="#更改系统代理设置" class="headerlink" title="更改系统代理设置"></a>更改系统代理设置</h4><p>进入代理设置 System settings &gt; Network &gt; Network Proxy<br>设置Method为Manual<br>设置Socks为 Host 127.0.0.1  1080<br>这时的代理设置为全局代理，接下来我们要介绍如何使用PAC文件进行更为智能的代理</p>
@@ -316,11 +341,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ubuntu/" rel="tag">#ubuntu</a>
+            <a href="/tags/ubuntu/" rel="tag"><i class="fa fa-tag"></i> ubuntu</a>
           
-            <a href="/tags/shadowsocks/" rel="tag">#shadowsocks</a>
+            <a href="/tags/shadowsocks/" rel="tag"><i class="fa fa-tag"></i> shadowsocks</a>
           
-            <a href="/tags/gfw/" rel="tag">#gfw</a>
+            <a href="/tags/gfw/" rel="tag"><i class="fa fa-tag"></i> gfw</a>
           
         </div>
       
@@ -362,7 +387,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/05/13/ubuntu-use-shadowsocks-and-pac/"
-           data-title="Ubuntu下使用Shadowsocks和PAC科学上网" data-url="http://yoursite.com/2016/05/13/ubuntu-use-shadowsocks-and-pac/">
+           data-title="Ubuntu下使用Shadowsocks和PAC科学上网" data-url="http://pandagao.com/2016/05/13/ubuntu-use-shadowsocks-and-pac/">
       </div>
     
   </div>
@@ -402,7 +427,7 @@
                src="http://7xpo7m.com1.z0.glb.clouddn.com/avatar.jpg"
                alt="pandaGao" />
           <p class="site-author-name" itemprop="name">pandaGao</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+          <p class="site-description motion-element" itemprop="description">人生如逆旅 我亦是行人</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -412,6 +437,13 @@
             </a>
           </div>
 
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
           
 
           

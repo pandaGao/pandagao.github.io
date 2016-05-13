@@ -84,15 +84,15 @@
 
 
 
-<meta name="description">
+<meta name="description" content="人生如逆旅 我亦是行人">
 <meta property="og:type" content="website">
 <meta property="og:title" content="pandaGao">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://pandagao.com/index.html">
 <meta property="og:site_name" content="pandaGao">
-<meta property="og:description">
+<meta property="og:description" content="人生如逆旅 我亦是行人">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pandaGao">
-<meta name="twitter:description">
+<meta name="twitter:description" content="人生如逆旅 我亦是行人">
 
 
 
@@ -175,12 +175,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            归档
+            分类
           </a>
         </li>
       
@@ -191,6 +191,16 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
           </a>
         </li>
       
@@ -253,6 +263,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/越过山丘/" itemprop="url" rel="index">
+                    <span itemprop="name">越过山丘</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -263,6 +292,18 @@
                 </a>
               </span>
             
+          
+
+          
+            <div class="post-tags tags-top">
+              
+                <a href="/tags/ubuntu/" rel="tag"><i class="fa fa-tag"></i> ubuntu</a>
+              
+                <a href="/tags/shadowsocks/" rel="tag"><i class="fa fa-tag"></i> shadowsocks</a>
+              
+                <a href="/tags/gfw/" rel="tag"><i class="fa fa-tag"></i> gfw</a>
+              
+            </div>
           
 
           
@@ -283,20 +324,12 @@
 
       
         
-          
-            <p>测试环境为Ubuntu16.04 LTS (Ubuntu 14.04以上均可)</p>
-<h3 id="1-安装Shadowsocks-qt5"><a href="#1-安装Shadowsocks-qt5" class="headerlink" title="1. 安装Shadowsocks-qt5"></a>1. 安装Shadowsocks-qt5</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:hzwhuang/ss-qt5</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install shadowsocks-qt5</span><br></pre></td></tr></table></figure>
-<h4 id="服务器设置"><a href="#服务器设置" class="headerlink" title="服务器设置"></a>服务器设置</h4><p>点击菜单栏中 “Connection &gt; Add &gt; Manually” 进行手动配置<br><a href="https://github.com/shadowsocks/shadowsocks-qt5/wiki/%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C#%E7%BC%96%E8%BE%91%E9%85%8D%E7%BD%AE" target="_blank" rel="external">点此查看详细配置信息</a><br>右键点击新建的连接，选择connect与代理服务器进行连接</p>
-<h4 id="更改系统代理设置"><a href="#更改系统代理设置" class="headerlink" title="更改系统代理设置"></a>更改系统代理设置</h4><p>进入代理设置 System settings &gt; Network &gt; Network Proxy<br>设置Method为Manual<br>设置Socks为 Host 127.0.0.1  1080<br>这时的代理设置为全局代理，接下来我们要介绍如何使用PAC文件进行更为智能的代理</p>
-<p>####</p>
-<h3 id="2-安装GenPAC"><a href="#2-安装GenPAC" class="headerlink" title="2. 安装GenPAC"></a>2. 安装GenPAC</h3><p>在多数情况下，我们更希望使用PAC模式的代理，让我们访问国内网站时不再先绕地球跑一圈，在Windows和Mac上的shadowsocks客户端可以轻松切换到PAC模式，而在Ubuntu上我们需要使用pac文件来设置系统代理以达到相同的效果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#首先安装pip</span><br><span class="line">sudo apt-get install python-pip</span><br><span class="line">#通过pip安装genpac</span><br><span class="line">sudo pip install genpac</span><br></pre></td></tr></table></figure></p>
-<h4 id="使用GenPAC生成pac文件"><a href="#使用GenPAC生成pac文件" class="headerlink" title="使用GenPAC生成pac文件"></a>使用GenPAC生成pac文件</h4><p>进行这个步骤需要保证shadowsocks已经连接<br><a href="https://github.com/JinnLynn/genpac#usage" target="_blank" rel="external">点此查看更多genpac参数</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">genpac -p &quot;SOCKS5 127.0.0.1:1080&quot; --gfwlist-proxy=&quot;SOCKS5 127.0.0.1:1080&quot; --gfwlist-url=https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output=&quot;autoproxy.pac&quot;</span><br></pre></td></tr></table></figure></p>
-<p>此时会生成一个名为autoproxy.pac的文件</p>
-<h4 id="更改系统代理设置-1"><a href="#更改系统代理设置-1" class="headerlink" title="更改系统代理设置"></a>更改系统代理设置</h4><p>进入代理设置 System settings &gt; Network &gt; Network Proxy<br>设置Method为Automatic<br>设置Configuration URL为autoproxy.pac文件的路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#例如 file:///home/用户名/Documents/autoproxy.pac</span><br></pre></td></tr></table></figure></p>
-<p>现在只有当你访问PAC列表内的域名时才会通过代理服务器获取数据</p>
-<p>好了，用那句经典的”预言”来当结束语吧：<br>Across the Great Wall we can reach every corner in the world</p>
-
-          
+          <p>测试环境为Ubuntu16.04 LTS (Ubuntu 14.04以上均可)<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/13/ubuntu-use-shadowsocks-and-pac/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -377,6 +410,16 @@
           
 
           
+            <div class="post-tags tags-top">
+              
+                <a href="/tags/html5/" rel="tag"><i class="fa fa-tag"></i> html5</a>
+              
+                <a href="/tags/canvas/" rel="tag"><i class="fa fa-tag"></i> canvas</a>
+              
+            </div>
+          
+
+          
 
           
           
@@ -394,19 +437,13 @@
 
       
         
-          
-            <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>想要将canvas元素当前显示的内容生成为图像文件，我们首先要获取canvas中的数据,在HTML5 <code>&lt;canvas&gt;</code>元素的标准中提供了<code>toDataURL()</code>的方法可以将canvas中的内容生成为指定格式的DataURL,使用方法如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设有一个id为cvs的canvas元素</span></span><br><span class="line"><span class="keyword">var</span> dataurl = <span class="built_in">document</span>.getElementById(<span class="string">'cvs'</span>).toDataURL(<span class="string">'image/png'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>我们现在需要将DataURL生成为一个png类型的图像文件，并且这个操作是在本地完成的，不需要服务器帮助生成文件。以下提供两种方法：</p>
-<h3 id="方法一-利用HTML5-lt-a-gt-标签的download属性"><a href="#方法一-利用HTML5-lt-a-gt-标签的download属性" class="headerlink" title="方法一 利用HTML5 &lt;a&gt;标签的download属性"></a>方法一 利用HTML5 <code>&lt;a&gt;</code>标签的download属性</h3><p>在HTML5标准中，<code>&lt;a&gt;</code>标签拥有一个新的属性download，download属性用来指明该超链接指向的目标是应该被下载的文件，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://www.pandagao.com&quot; download&gt;下载&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
-<p>download属性可以被赋值，用来指明下载文件的名称，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://www.pandagao.com&quot; download=&quot;index.html&quot;&gt;下载&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
-<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p>现在，我们可以通过将DataURL赋值给<code>&lt;a&gt;</code>标签的href属性，并且使用download属性使其转变为可下载的图片。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dataurl = <span class="built_in">document</span>.getElementById(<span class="string">'cvs'</span>).toDataURL(<span class="string">'image/png'</span>);</span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</span><br><span class="line">a.href = dataurl;</span><br><span class="line">a.download = <span class="string">"sample"</span>;</span><br><span class="line">a.click();</span><br></pre></td></tr></table></figure>
-<h4 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h4><p>目前只有Chrome和FireFox支持download属性</p>
-<h3 id="方法二-修改DataURL的Mime-type"><a href="#方法二-修改DataURL的Mime-type" class="headerlink" title="方法二 修改DataURL的Mime-type"></a>方法二 修改DataURL的Mime-type</h3><p>如果我们直接将获得的DataURL赋值给<code>&lt;a&gt;</code>标签的href属性，在点击链接后浏览器只会在新窗口打开图片，并不会直接执行下载。我们可以修改DataURL的Mime-type为octet-stream，强制让浏览器下载。</p>
-<h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dataurl = <span class="built_in">document</span>.getElementById(<span class="string">'cvs'</span>).toDataURL(<span class="string">'image/png'</span>).replace(<span class="string">"image/png"</span>, <span class="string">"image/octet-stream"</span>);</span><br><span class="line"><span class="keyword">var</span> tmpa = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</span><br><span class="line">a.href = dataurl;</span><br><span class="line">a.target = <span class="string">"_blank"</span>;</span><br><span class="line">a.click();</span><br></pre></td></tr></table></figure>
-<h4 id="兼容性-1"><a href="#兼容性-1" class="headerlink" title="兼容性"></a>兼容性</h4><p>这个方法对于大部分主流浏览器都可用，但是octet-stream并不包含文件名和扩展名的信息，所以使用这个方法下载下来的文件是没有扩展名的文件，浏览器可能默认的命名为“下载”或者“unknown”</p>
-
-          
+          <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>想要将canvas元素当前显示的内容生成为图像文件，我们首先要获取canvas中的数据,在HTML5 <code>&lt;canvas&gt;</code>元素的标准中提供了<code>toDataURL()</code>的方法可以将canvas中的内容生成为指定格式的DataURL,使用方法如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设有一个id为cvs的canvas元素</span></span><br><span class="line"><span class="keyword">var</span> dataurl = <span class="built_in">document</span>.getElementById(<span class="string">'cvs'</span>).toDataURL(<span class="string">'image/png'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>我们现在需要将DataURL生成为一个png类型的图像文件，并且这个操作是在本地完成的，不需要服务器帮助生成文件。以下提供两种方法：<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/13/canvastofile/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -469,7 +506,7 @@
                src="http://7xpo7m.com1.z0.glb.clouddn.com/avatar.jpg"
                alt="pandaGao" />
           <p class="site-author-name" itemprop="name">pandaGao</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+          <p class="site-description motion-element" itemprop="description">人生如逆旅 我亦是行人</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -479,6 +516,13 @@
             </a>
           </div>
 
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
           
 
           
