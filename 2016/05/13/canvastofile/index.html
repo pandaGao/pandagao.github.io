@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="html5,canvas," />
 
 
 
@@ -84,15 +84,16 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="白衣沽酒">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="准备工作想要将canvas元素当前显示的内容生成为图像文件，我们首先要获取canvas中的数据,在HTML5 &amp;lt;canvas&amp;gt;元素的标准中提供了toDataURL()的方法可以将canvas中的内容生成为指定格式的DataURL,使用方法如下:12// 假设有一个id为cvs的canvas元素var dataurl = document.getElementById(&apos;cvs&apos;).to">
+<meta property="og:type" content="article">
+<meta property="og:title" content="canvas元素内容生成图像文件">
+<meta property="og:url" content="http://yoursite.com/2016/05/13/canvastofile/index.html">
 <meta property="og:site_name" content="白衣沽酒">
-<meta property="og:description">
+<meta property="og:description" content="准备工作想要将canvas元素当前显示的内容生成为图像文件，我们首先要获取canvas中的数据,在HTML5 &amp;lt;canvas&amp;gt;元素的标准中提供了toDataURL()的方法可以将canvas中的内容生成为指定格式的DataURL,使用方法如下:12// 假设有一个id为cvs的canvas元素var dataurl = document.getElementById(&apos;cvs&apos;).to">
+<meta property="og:updated_time" content="2016-05-13T14:13:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="白衣沽酒">
-<meta name="twitter:description">
+<meta name="twitter:title" content="canvas元素内容生成图像文件">
+<meta name="twitter:description" content="准备工作想要将canvas元素当前显示的内容生成为图像文件，我们首先要获取canvas中的数据,在HTML5 &amp;lt;canvas&amp;gt;元素的标准中提供了toDataURL()的方法可以将canvas中的内容生成为指定格式的DataURL,使用方法如下:12// 假设有一个id为cvs的canvas元素var dataurl = document.getElementById(&apos;cvs&apos;).to">
 
 
 
@@ -110,7 +111,7 @@
   };
 </script>
 
-  <title> 白衣沽酒 </title>
+  <title> canvas元素内容生成图像文件 | 白衣沽酒 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -131,9 +132,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -210,9 +209,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -232,114 +231,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/05/13/ubuntu-use-shadowsocks-and-pac/" itemprop="url">
-                  Ubuntu下使用Shadowsocks和PAC科学上网
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-13T22:02:17+08:00" content="2016-05-13">
-              2016-05-13
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>测试环境为Ubuntu16.04 LTS (Ubuntu 14.04以上均可)</p>
-<h3 id="1-安装Shadowsocks-qt5"><a href="#1-安装Shadowsocks-qt5" class="headerlink" title="1. 安装Shadowsocks-qt5"></a>1. 安装Shadowsocks-qt5</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:hzwhuang/ss-qt5</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install shadowsocks-qt5</span><br></pre></td></tr></table></figure>
-<h4 id="服务器设置"><a href="#服务器设置" class="headerlink" title="服务器设置"></a>服务器设置</h4><p>点击菜单栏中 “Connection &gt; Add &gt; Manually” 进行手动配置<br><a href="https://github.com/shadowsocks/shadowsocks-qt5/wiki/%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C#%E7%BC%96%E8%BE%91%E9%85%8D%E7%BD%AE" target="_blank" rel="external">点此查看详细配置信息</a><br>右键点击新建的连接，选择connect与代理服务器进行连接</p>
-<h4 id="更改系统代理设置"><a href="#更改系统代理设置" class="headerlink" title="更改系统代理设置"></a>更改系统代理设置</h4><p>进入代理设置 System settings &gt; Network &gt; Network Proxy<br>设置Method为Manual<br>设置Socks为 Host 127.0.0.1  1080<br>这时的代理设置为全局代理，接下来我们要介绍如何使用PAC文件进行更为智能的代理</p>
-<p>####</p>
-<h3 id="2-安装GenPAC"><a href="#2-安装GenPAC" class="headerlink" title="2. 安装GenPAC"></a>2. 安装GenPAC</h3><p>在多数情况下，我们更希望使用PAC模式的代理，让我们访问国内网站时不再先绕地球跑一圈，在Windows和Mac上的shadowsocks客户端可以轻松切换到PAC模式，而在Ubuntu上我们需要使用pac文件来设置系统代理以达到相同的效果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#首先安装pip</span><br><span class="line">sudo apt-get install python-pip</span><br><span class="line">#通过pip安装genpac</span><br><span class="line">sudo pip install genpac</span><br></pre></td></tr></table></figure></p>
-<h4 id="使用GenPAC生成pac文件"><a href="#使用GenPAC生成pac文件" class="headerlink" title="使用GenPAC生成pac文件"></a>使用GenPAC生成pac文件</h4><p>进行这个步骤需要保证shadowsocks已经连接<br><a href="https://github.com/JinnLynn/genpac#usage" target="_blank" rel="external">点此查看更多genpac参数</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">genpac -p &quot;SOCKS5 127.0.0.1:1080&quot; --gfwlist-proxy=&quot;SOCKS5 127.0.0.1:1080&quot; --gfwlist-url=https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output=&quot;autoproxy.pac&quot;</span><br></pre></td></tr></table></figure></p>
-<p>此时会生成一个名为autoproxy.pac的文件</p>
-<h4 id="更改系统代理设置-1"><a href="#更改系统代理设置-1" class="headerlink" title="更改系统代理设置"></a>更改系统代理设置</h4><p>进入代理设置 System settings &gt; Network &gt; Network Proxy<br>设置Method为Automatic<br>设置Configuration URL为autoproxy.pac文件的路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#例如 file:///home/用户名/Documents/autoproxy.pac</span><br></pre></td></tr></table></figure></p>
-<p>现在只有当你访问PAC列表内的域名时才会通过代理服务器获取数据</p>
-<p>好了，用那句经典的”预言”来当结束语吧：<br>Across the Great Wall we can reach every corner in the world</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/13/canvastofile/" itemprop="url">
-                  canvas元素内容生成图像文件
-                </a>
+                canvas元素内容生成图像文件
               
             
           </h1>
@@ -379,9 +271,7 @@
       
 
       
-        
-          
-            <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>想要将canvas元素当前显示的内容生成为图像文件，我们首先要获取canvas中的数据,在HTML5 <code>&lt;canvas&gt;</code>元素的标准中提供了<code>toDataURL()</code>的方法可以将canvas中的内容生成为指定格式的DataURL,使用方法如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设有一个id为cvs的canvas元素</span></span><br><span class="line"><span class="keyword">var</span> dataurl = <span class="built_in">document</span>.getElementById(<span class="string">'cvs'</span>).toDataURL(<span class="string">'image/png'</span>);</span><br></pre></td></tr></table></figure></p>
+        <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>想要将canvas元素当前显示的内容生成为图像文件，我们首先要获取canvas中的数据,在HTML5 <code>&lt;canvas&gt;</code>元素的标准中提供了<code>toDataURL()</code>的方法可以将canvas中的内容生成为指定格式的DataURL,使用方法如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设有一个id为cvs的canvas元素</span></span><br><span class="line"><span class="keyword">var</span> dataurl = <span class="built_in">document</span>.getElementById(<span class="string">'cvs'</span>).toDataURL(<span class="string">'image/png'</span>);</span><br></pre></td></tr></table></figure></p>
 <p>我们现在需要将DataURL生成为一个png类型的图像文件，并且这个操作是在本地完成的，不需要服务器帮助生成文件。以下提供两种方法：</p>
 <h3 id="方法一-利用HTML5-lt-a-gt-标签的download属性"><a href="#方法一-利用HTML5-lt-a-gt-标签的download属性" class="headerlink" title="方法一 利用HTML5 &lt;a&gt;标签的download属性"></a>方法一 利用HTML5 <code>&lt;a&gt;</code>标签的download属性</h3><p>在HTML5标准中，<code>&lt;a&gt;</code>标签拥有一个新的属性download，download属性用来指明该超链接指向的目标是应该被下载的文件，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://www.pandagao.com&quot; download&gt;下载&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
 <p>download属性可以被赋值，用来指明下载文件的名称，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://www.pandagao.com&quot; download=&quot;index.html&quot;&gt;下载&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
@@ -392,36 +282,60 @@
 <h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dataurl = <span class="built_in">document</span>.getElementById(<span class="string">'cvs'</span>).toDataURL(<span class="string">'image/png'</span>).replace(<span class="string">"image/png"</span>, <span class="string">"image/octet-stream"</span>);</span><br><span class="line"><span class="keyword">var</span> tmpa = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</span><br><span class="line">a.href = dataurl;</span><br><span class="line">a.target = <span class="string">"_blank"</span>;</span><br><span class="line">a.click();</span><br></pre></td></tr></table></figure>
 <h4 id="兼容性-1"><a href="#兼容性-1" class="headerlink" title="兼容性"></a>兼容性</h4><p>这个方法对于大部分主流浏览器都可用，但是octet-stream并不包含文件名和扩展名的信息，所以使用这个方法下载下来的文件是没有扩展名的文件，浏览器可能默认的命名为“下载”或者“unknown”</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/html5/" rel="tag">#html5</a>
+          
+            <a href="/tags/canvas/" rel="tag">#canvas</a>
+          
+        </div>
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/13/ubuntu-use-shadowsocks-and-pac/" rel="prev" title="Ubuntu下使用Shadowsocks和PAC科学上网">
+                Ubuntu下使用Shadowsocks和PAC科学上网 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -429,6 +343,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -448,8 +366,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://7xpo7m.com1.z0.glb.clouddn.com/avatar.jpg"
@@ -530,6 +457,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一-利用HTML5-lt-a-gt-标签的download属性"><span class="nav-number">2.</span> <span class="nav-text">方法一 利用HTML5 <a>标签的download属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#示例"><span class="nav-number">2.1.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容性"><span class="nav-number">2.2.</span> <span class="nav-text">兼容性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二-修改DataURL的Mime-type"><span class="nav-number">3.</span> <span class="nav-text">方法二 修改DataURL的Mime-type</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#示例-1"><span class="nav-number">3.1.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容性-1"><span class="nav-number">3.2.</span> <span class="nav-text">兼容性</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -633,6 +571,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
