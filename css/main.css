@@ -1324,6 +1324,9 @@ pre .javascript .function {
   margin-right: 10px;
   font-size: 13px;
 }
+.post-tags.tags-top {
+  margin-top: 0;
+}
 .post-nav {
   overflow: hidden;
   margin-top: 60px;
@@ -1549,7 +1552,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1ccc6a;
+  background: #29daff;
 }
 .links-of-blogroll {
   font-size: 13px;
