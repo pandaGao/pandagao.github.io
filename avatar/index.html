@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avatar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {padding:0;margin:0;width:100%;}
+    #app {margin:0 auto;width:100%;max-width:768px;}
+    .btns {width:100%;display: flex;}
+    button {width:33.333%;padding-top: .5em;padding-bottom: .5em;}
+    </style>
+    <script src="js/pixi.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="canvas"></div>
+        <div class="btns">
+            <button onclick="changeHead();">Head</button>
+            <button onclick="changeFace();">Face</button>
+            <button onclick="changeHair();">Hair</button>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
