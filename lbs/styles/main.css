@@ -1,0 +1,35 @@
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: inherit;
+  width: inherit;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.amap-logo {
+  display: none;
+}
+
+.amap-copyright {
+  display: none;
+}
