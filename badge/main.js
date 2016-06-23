@@ -213,7 +213,12 @@ var app = {
 	},
 
 	saveCanvas: function() {
-		window.location.href = this.cvs.toDataURL('image/png');
+		var image = document.createElement('img');
+		image.src = this.cvs.toDataURL('image/png');
+		document.body.appendChild(image);
+		this.cvs.style.display = "none";
+		image.style.marginLeft = -this.cvsSize/2+"px";
+		image.style.marginTop = -this.cvsSize/2+"px";
 	},
 
 	/**
