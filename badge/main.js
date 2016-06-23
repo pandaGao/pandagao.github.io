@@ -213,11 +213,7 @@ var app = {
 	},
 
 	saveCanvas: function() {
-		var dataurl = this.cvs.toDataURL('image/png');
-		var a = document.createElement('a');
-		a.href = dataurl;
-		a.download = "badge";
-		a.click();
+		Canvas2Image.saveAsPNG(this.cvs, this.cvsSize, this.cvsSize);
 	},
 
 	/**
