@@ -213,7 +213,7 @@ var app = {
 	},
 
 	saveCanvas: function() {
-		Canvas2Image.saveAsPNG(this.cvs, this.cvsSize, this.cvsSize);
+		window.location.href = this.cvs.toDataURL('image/png');
 	},
 
 	/**
