@@ -8,6 +8,7 @@
 </head>
 <body>
 	<div class="navbar">
+		<input type="color" id="color">
 	</div>
 	<canvas id="cvs"></canvas>
 	<div class="toolbar">
@@ -15,9 +16,8 @@
 		<button class="btn" onclick="app.setMask(0);">正方形蒙版</button>
 		<button class="btn" onclick="app.setMask(1);">圆形蒙版</button>
 		<button class="btn" onclick="app.setMask(2);">三角形蒙版</button>
-		<button class="btn" onclick="app.saveCanvas();">保存</button>
+		<button class="btn" onclick="app.toPixel();">像素化</button>
 	</div>
-	<script type='text/javascript' src='./canvas2image.js'></script>
 	<script type='text/javascript' src='./main.js'></script>
 </body>
 </html>
