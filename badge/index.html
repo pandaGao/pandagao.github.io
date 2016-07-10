@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Badge</title>
-	<link rel="stylesheet" href="./main.css">
+    <meta charset="UTF-8">
+    <title>Phaser - ES6 - Webpack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="cleartype" content="on">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
+
 <body>
-	<div class="navbar">
-		<input type="color" id="color">
-	</div>
-	<canvas id="cvs"></canvas>
-	<div class="toolbar">
-		<button class="btn" onclick="app.seedFilling();">填充</button>
-		<button class="btn" onclick="app.setMask(0);">正方形蒙版</button>
-		<button class="btn" onclick="app.setMask(1);">圆形蒙版</button>
-		<button class="btn" onclick="app.setMask(2);">三角形蒙版</button>
-		<button class="btn" onclick="app.toPixel();">像素化</button>
-	</div>
-	<script type='text/javascript' src='./main.js'></script>
+
+    <div id="content"></div>
+
+    <script src="dist/bundle.js"></script>
+
 </body>
+
 </html>
